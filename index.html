@@ -5,7 +5,7 @@
   <meta name="description" content="Portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Directory</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <canvas id="bg-canvas" class="bg-canvas"></canvas>
@@ -13,8 +13,8 @@
     <div class="nav-controls">
       <a href="#" id="tab-home" class="nav-btn active">J <span class="nav-separator">|</span> Notes</a>
       <a href="#" id="tab-about" class="nav-btn">About</a>
-      <!-- Visually hidden by default, triggered in main.js -->
-      <a href="Jatin_Polanki_Resume.pdf" download="Jatin_Polanki_Resume.pdf" id="dl-resume-btn" class="nav-btn dl-btn" style="opacity: 0; pointer-events: none;">
+      <!-- Visually hidden by default, triggered in main.js on desktop -->
+      <a href="Jatin_Polanki_Resume.pdf" download="Jatin_Polanki_Resume.pdf" id="dl-resume-btn" class="nav-btn dl-btn">
         Resume
         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
           <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
@@ -22,9 +22,9 @@
       </a>
     </div>
     <div class="headline-container" id="headline-view">
-      <h1 class="main-headline">Hi, I'm Jatin - a creative misfit based in Bengaluru.</h1>
+      <h1 class="main-headline">Hi, I'm Jatin - a creative polymath based in Bengaluru.</h1>
       <p class="sub-headline">
-        I <span class="interactive-word" data-filter="SCRIPT">script</span>, <span class="interactive-word" data-filter="DESIGN">design</span>, <span class="interactive-word" data-filter="VOICE OVER">voice</span> and create<br>
+        I <span class="interactive-word" data-filter="SCRIPT" role="button" tabindex="0">script</span>, <span class="interactive-word" data-filter="DESIGN" role="button" tabindex="0">design</span>, <span class="interactive-word" data-filter="VOICE OVER" role="button" tabindex="0">voice</span> and create<br>
         content across different media.
       </p>
     </div>
@@ -204,7 +204,7 @@
 
   <div id="modal-overlay" class="modal-overlay">
     <div class="modal-content">
-      <button class="modal-close" id="modal-close">&times;</button>
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
       <div id="modal-media-container" class="modal-media-container"></div>
       <div class="modal-details">
         <div class="modal-header">
@@ -219,6 +219,6 @@
     </div>
   </div>
   
-  <script src="main.js"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
